@@ -115,6 +115,7 @@ flutter:
     - lib/PhoApp/005-info.svg
     - lib/PhoApp/shopping-bag.svg
     - lib/PhoApp/nathan-dumlao-zUNs99PGDg0-unsplash.png
+    - lib/PhoApp/Add to favorites button.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

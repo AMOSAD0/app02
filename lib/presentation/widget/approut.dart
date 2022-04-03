@@ -4,6 +4,7 @@ import 'package:app02/presentation/Modules/homeScreen.dart';
 import 'package:app02/presentation/Modules/introduction.dart';
 import 'package:app02/presentation/Modules/loginScreen.dart';
 import 'package:app02/presentation/Modules/mapScreen.dart';
+import 'package:app02/presentation/Modules/product_Screen.dart';
 import 'package:app02/presentation/Modules/resestpassword.dart';
 import 'package:app02/presentation/Modules/signupScreen.dart';
 import 'package:app02/presentation/Modules/splashScreen.dart';
@@ -42,6 +43,8 @@ case forgetpath:
  case Mappath:
  return MaterialPageRoute(builder: (context) => MapScrenn(),);
 
+ case Product_:
+ return MaterialPageRoute(builder: (context) => ProductScreen(),);
 
 }
 }

@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:app02/constants/const.dart';
+import 'package:app02/constants/screens.dart';
 import 'package:app02/domin/product_cubit/product_cubit.dart';
 import 'package:app02/presentation/widget/contprodct.dart';
 import 'package:flutter/material.dart';
@@ -88,9 +89,14 @@ class OfferScH extends StatelessWidget {
             child: ListView.builder(
               itemCount: list_p.length,
               itemBuilder: (context, index) {
-                return ContnrProdct(
-                  img: listph20[index],
-                  txt: list_p[index].Name,
+                return InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, Product_);
+                  },
+                  child: ContnrProdct(
+                    img: listph20[index],
+                    txt: list_p[index].Name,
+                  ),
                 );
               },),
           )

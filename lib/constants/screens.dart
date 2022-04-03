@@ -9,3 +9,4 @@ const homepath='/home';
 const forgetpath='/forget';
 const codepath='/code';
 const Mappath='/map';
+const Product_='pr';
