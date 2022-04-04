@@ -1,4 +1,5 @@
 import 'package:app02/constants/screens.dart';
+import 'package:app02/presentation/Modules/cart_screen.dart';
 import 'package:app02/presentation/Modules/code_Screen.dart';
 import 'package:app02/presentation/Modules/homeScreen.dart';
 import 'package:app02/presentation/Modules/introduction.dart';
@@ -45,6 +46,9 @@ case forgetpath:
 
  case Product_:
  return MaterialPageRoute(builder: (context) => ProductScreen(),);
+ 
+  case Cart:
+ return MaterialPageRoute(builder: (context) => CartScreen(),);
 
 }
 }

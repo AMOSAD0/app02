@@ -3,9 +3,11 @@
 import 'package:app02/constants/const.dart';
 import 'package:app02/constants/screens.dart';
 import 'package:app02/domin/product_cubit/product_cubit.dart';
+import 'package:app02/presentation/Modules/cart_screen.dart';
 import 'package:app02/presentation/Modules/product_Screen.dart';
 import 'package:app02/presentation/widget/contprodct.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:sizer/sizer.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -41,8 +43,13 @@ class OfferScH extends StatelessWidget {
                   color: HexColor('#4A4B4D'),
                 ),),
           actions: [
-                Icon(Icons.shopping_cart,size: 22.sp,
-                color: HexColor('#4A4B4D'),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, Cart);
+                  },
+                  child: Icon(Icons.shopping_cart,size: 22.sp,
+                  color: HexColor('#4A4B4D'),
+                  ),
                 )
               
         ],),
