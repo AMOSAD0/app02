@@ -1,6 +1,5 @@
 import 'package:app02/constants/const.dart';
 import 'package:app02/presentation/widget/button.dart';
-import 'package:app02/presentation/widget/produc_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:sizer/sizer.dart';
@@ -89,7 +88,8 @@ class CartScreen extends StatelessWidget {
               ),
           ),
           SizedBox(height: 5.h),
-          buttonO(text:'order',)
+          InkWell(onTap:(){
+          },child: buttonO(text:'order',))
         ],
       )
         
