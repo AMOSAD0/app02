@@ -6,10 +6,13 @@ class ProductCart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 10.h,
-      width: 10.w,
-      color: Colors.red,
+    return Padding(
+      padding: const EdgeInsets.all(50.0),
+      child: Container(
+        height: 10.h,
+        width: 10.w,
+        color: Colors.black,
+      ),
     );
   }
 }

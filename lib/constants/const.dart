@@ -1,3 +1,4 @@
+import 'package:app02/data/model/product_Model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -29,7 +30,7 @@ var t12='Real time tracking of your food on the app\n once you placed the order'
 var clrText='#FFFFFF';
 var clrButton='#FC6011';
 
-var list_cart=[
+List<Product>list_cart=[
   
 ];
 

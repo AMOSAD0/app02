@@ -157,7 +157,7 @@ var img;
                          ),
                           InkWell(
                             onTap: () {
-                              list_cart.add(prod);
+                              list_cart.add(prod!);
                               
                             },
                             child: Container(
