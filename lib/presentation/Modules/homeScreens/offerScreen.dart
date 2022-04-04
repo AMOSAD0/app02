@@ -3,6 +3,7 @@
 import 'package:app02/constants/const.dart';
 import 'package:app02/constants/screens.dart';
 import 'package:app02/domin/product_cubit/product_cubit.dart';
+import 'package:app02/presentation/Modules/product_Screen.dart';
 import 'package:app02/presentation/widget/contprodct.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -91,7 +92,10 @@ class OfferScH extends StatelessWidget {
               itemBuilder: (context, index) {
                 return InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, Product_);
+                  //  Navigator.pushNamed(context, Product_);
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                      return ProductScreen(prod: list_p[index],img: listph20[index],);
+                    },));
                   },
                   child: ContnrProdct(
                     img: listph20[index],
