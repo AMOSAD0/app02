@@ -38,21 +38,17 @@ import 'package:hexcolor/hexcolor.dart';
             child: Image.asset(topShape,height: 60.h, width: 150.w,),
           ),
 
-
            //loga phot 2
            Positioned(
              top: hScreen*0.35,
              right: 50.sp,
              left: 50.sp,
              child: Image.asset(logo,height: hScreen*0.23,),
-           ),
-           // text
+           ), // text
            Positioned(
              top: hScreen*0.65,
-             
              right: 10.sp,
              left: 10.sp,
-             
              child: Column(
                children: [
                  Text('''    Discover the best foods from over 1,000 

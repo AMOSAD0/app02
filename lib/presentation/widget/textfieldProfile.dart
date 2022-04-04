@@ -9,8 +9,6 @@ var hinttext1;
 var txt;
   @override
   Widget build(BuildContext context) {
-    var hscreen=MediaQuery.of(context).size.height;
-    var wscreen=MediaQuery.of(context).size.width;
     return Container(
       height: 8.5.h,
       width: 88.86.w,

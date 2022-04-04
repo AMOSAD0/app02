@@ -1,4 +1,5 @@
 import 'package:app02/constants/const.dart';
+import 'package:app02/presentation/widget/button.dart';
 import 'package:app02/presentation/widget/produc_cart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -15,73 +16,82 @@ class CartScreen extends StatelessWidget {
 'lib/PhoApp/nathan-dumlao-zUNs99PGDg0-unsplash.png',
 ];
     return Scaffold(
-      body: ListView.builder(
-      itemCount:list_cart.length,
-        itemBuilder:(context,index){
-           return Padding(
-             padding: const EdgeInsets.all(8.0),
-             child: Container(
-               height: 20.h,
-               decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(25),
-                  border: Border.all(
-                    color: Colors.deepOrange,
-                    width: 1.w
-                  ),
-               ),
-               child: Row(
-                 children: [
-                   Padding(
-                     padding: const EdgeInsets.all(8.0),
-                     child: Container(
-                       height: 30.h,
-                       width: 35.w,
-                       
-                       decoration: BoxDecoration(
-                       image: DecorationImage(image: AssetImage(listph20[index]),
-                       fit: BoxFit.fill
-                       ),
-                       color: Colors.black,  
-                       borderRadius: BorderRadius.circular(20)
-                       ),
+      body: Column(
+        children: [
+          Container(
+            height: 70.h,
+            child: ListView.builder(
+            itemCount:list_cart.length,
+              itemBuilder:(context,index){
+                 return Padding(
+                   padding: const EdgeInsets.all(8.0),
+                   child: Container(
+                     height: 20.h,
+                     decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(25),
+                        border: Border.all(
+                          color: Colors.deepOrange,
+                          width: 1.w
+                        ),
                      ),
-                   ),
-                   Padding(
-                     padding: const EdgeInsets.all(8.0),
-                     child: Column(
-                       mainAxisAlignment: MainAxisAlignment.spaceAround,
+                     child: Row(
                        children: [
-                        
-                         Text(list_cart[index].Name!,
-                         style: TextStyle(
-                           fontSize: 17.sp,
-                           fontWeight: FontWeight.bold
+                         Padding(
+                           padding: const EdgeInsets.all(8.0),
+                           child: Container(
+                             height: 30.h,
+                             width: 35.w,
+
+                             decoration: BoxDecoration(
+                             image: DecorationImage(image: AssetImage(listph20[index]),
+                             fit: BoxFit.fill
+                             ),
+                             color: Colors.black,
+                             borderRadius: BorderRadius.circular(20)
+                             ),
+                           ),
                          ),
-                         ),
-                         Text(list_cart[index].Price!,
-                         style: TextStyle(
-                           fontSize: 17.sp,
-                           fontWeight: FontWeight.bold
-                         ),
-                         ),
-                         Text('1',
-                         style: TextStyle(
-                           fontSize: 17.sp,
-                           fontWeight: FontWeight.bold
-                         ),
-                         ),
+                         Padding(
+                           padding: const EdgeInsets.all(8.0),
+                           child: Column(
+                             mainAxisAlignment: MainAxisAlignment.spaceAround,
+                             children: [
+
+                               Text(list_cart[index].Name!,
+                               style: TextStyle(
+                                 fontSize: 17.sp,
+                                 fontWeight: FontWeight.bold
+                               ),
+                               ),
+                               Text(list_cart[index].Price!,
+                               style: TextStyle(
+                                 fontSize: 17.sp,
+                                 fontWeight: FontWeight.bold
+                               ),
+                               ),
+                               Text('1',
+                               style: TextStyle(
+                                 fontSize: 17.sp,
+                                 fontWeight: FontWeight.bold
+                               ),
+                               ),
+                             ],
+                           ),
+                         )
                        ],
                      ),
-                   )
-                 ],
-               ),
-              
-             ),
-           );
-         }
-        
-        )
+
+                   ),
+                 );
+               }
+
+              ),
+          ),
+          SizedBox(height: 5.h),
+          buttonO(text:'order',)
+        ],
+      )
         
          
     );

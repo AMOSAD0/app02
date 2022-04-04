@@ -31,7 +31,6 @@ var clrText='#FFFFFF';
 var clrButton='#FC6011';
 
 List<Product>list_cart=[
-  
 ];
 
 var listpho=[

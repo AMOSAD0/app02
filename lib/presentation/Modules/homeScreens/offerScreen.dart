@@ -101,7 +101,7 @@ class OfferScH extends StatelessWidget {
                   onTap: () {
                   //  Navigator.pushNamed(context, Product_);
                     Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                      return ProductScreen(prod: list_p[index],img: listph20[index],);
+                      return ProductScreen(prod: list_p[index],img: listph20[index],count: 1,);
                     },));
                   },
                   child: ContnrProdct(

@@ -10,10 +10,11 @@ import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 class ProductScreen extends StatelessWidget {
- ProductScreen({ Key? key ,this.prod,this.img}) : super(key: key);
+ ProductScreen({ Key? key ,this.prod,this.img,this.count}) : super(key: key);
 
 Product ?prod;
 var img;
+double? count=2;
 
   @override
   Widget build(BuildContext context) {
@@ -95,31 +96,38 @@ var img;
 
                           Text('Number of Portions',
                           ),
-                          Container(
-                            height:5.h ,
-                            width: 12.w,
-                            child: Icon(Icons.exposure_minus_1,color: Colors.white,),
-                            decoration: BoxDecoration(
-                               color: Colors.orange,
-                               borderRadius: BorderRadius.circular(30)
+                          InkWell(
+                            onTap: (){
+                              count=count!-1;
+                            },
+                          child: Container(
+                              height:5.h ,
+                              width: 12.w,
+                              child: Icon(Icons.exposure_minus_1,color: Colors.white,),
+                              decoration: BoxDecoration(
+                                 color: Colors.orange,
+                                 borderRadius: BorderRadius.circular(30)
+                              ),
                             ),
                           ),
-                          Text('1',
+                          Text(count!.toString(),
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.normal,
                             color: Colors.black
                           ),
                           ),
-                            Container(
-                            height:5.h ,
-                            width: 12.w,
-                            child: Icon(Icons.plus_one_outlined,color: Colors.white),
-                            decoration: BoxDecoration(
-                               color: Colors.orange,
-                               borderRadius: BorderRadius.circular(30)
-                            ),
+                            InkWell(
+                              onTap:(){  count=count!-1;},child: Container(
+                              height:5.h ,
+                              width: 12.w,
+                              child: Icon(Icons.plus_one_outlined,color: Colors.white),
+                              decoration: BoxDecoration(
+                                 color: Colors.orange,
+                                 borderRadius: BorderRadius.circular(30)
+                              ),
                           ),
+                            ),
 
                         ],
                       ),
@@ -186,7 +194,6 @@ var img;
             child: Container(
               height: 11.h,
               width: 20.w,
-              
               child: Image.asset('lib/PhoApp/Add to favorites button.png'),
             ),
           ),
