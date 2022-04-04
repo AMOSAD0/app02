@@ -4,11 +4,16 @@
 
 // ignore_for_file: prefer_const_constructors
 
+import 'package:app02/constants/const.dart';
+import 'package:app02/data/model/product_Model.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
 class ProductScreen extends StatelessWidget {
-  const ProductScreen({ Key? key }) : super(key: key);
+ ProductScreen({ Key? key ,this.prod,this.img}) : super(key: key);
+
+Product ?prod;
+var img;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +26,14 @@ class ProductScreen extends StatelessWidget {
             child: Container(
               height: 40.h,
               width: 100.w,
-              color: Colors.orange,
+              
+             decoration: BoxDecoration(
+               color: Colors.orange,  
+               image: DecorationImage(image: AssetImage(img,),
+                fit: BoxFit.fill
+               ),
+             ),
+          //  child: Image.asset(img,),
             ),
           ),
           //====================================//
@@ -38,7 +50,7 @@ class ProductScreen extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text('Name',
+                    child: Text(prod!.Name!,
                     style: TextStyle(
                       fontSize: 20.sp,
                     ),
@@ -46,7 +58,7 @@ class ProductScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text('Price',
+                    child: Text(prod!.Price!,
                     textAlign: TextAlign.right,
                     style: TextStyle(
                       fontSize: 20.sp,
@@ -118,7 +130,7 @@ class ProductScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(left: 80,right: 80),
                     child: Container(
-                      height: 13.h,
+                      height: 16.h,
                      decoration: BoxDecoration(
                        color: Colors.white,
                        borderRadius: BorderRadius.circular(25),
@@ -135,15 +147,27 @@ class ProductScreen extends StatelessWidget {
                      child: Column(
                        mainAxisAlignment: MainAxisAlignment.center,
                        children: [
-                         Text('Total Price'),
-                         Text('LKR 1500'),
-                          Container(
-                            height:4.h ,
-                            width: 30.w,
-                            child: Center(child: Text('ADD')),
-                            decoration: BoxDecoration(
-                               color: Colors.orange,
-                               borderRadius: BorderRadius.circular(30)
+                         Padding(
+                           padding: const EdgeInsets.all(8.0),
+                           child: Text('Total Price'),
+                         ),
+                         Padding(
+                           padding: const EdgeInsets.all(8.0),
+                           child: Text('LKR 1500'),
+                         ),
+                          InkWell(
+                            onTap: () {
+                              list_cart.add(prod);
+                              
+                            },
+                            child: Container(
+                              height:4.h ,
+                              width: 30.w,
+                              child: Center(child: Text('ADD')),
+                              decoration: BoxDecoration(
+                                 color: Colors.orange,
+                                 borderRadius: BorderRadius.circular(30)
+                              ),
                             ),
                           ),
                        ],

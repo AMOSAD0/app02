@@ -29,6 +29,10 @@ var t12='Real time tracking of your food on the app\n once you placed the order'
 var clrText='#FFFFFF';
 var clrButton='#FC6011';
 
+var list_cart=[
+  
+];
+
 var listpho=[
   "lib/PhoApp/alireza-etemadi-9G_oJBKwi1c-unsplash.png",
   'lib/PhoApp/haryo-setyadi-yvzzemH8-J0-unsplash.png',
