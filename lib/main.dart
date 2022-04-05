@@ -2,12 +2,12 @@
 
 import 'package:app02/data/cashHelper.dart';
 import 'package:app02/domin/auth_cubit/auth%20cubit.dart';
-import 'package:app02/domin/auth_cubit/auth_state.dart';
+
 import 'package:app02/domin/auth_cubit/emai_cubit.dart';
 import 'package:app02/domin/domin_cubit_check_conenction/conection_state.dart';
 import 'package:app02/domin/domin_cubit_check_conenction/cubit_conection.dart';
 import 'package:app02/domin/location_cubit/location_cubit.dart';
-import 'package:app02/domin/order_cubit/order_Cubit.dart';
+
 import 'package:app02/domin/product_cubit/product_cubit.dart';
 import 'package:app02/presentation/dialouges/nointernet.dart';
 import 'package:app02/presentation/widget/approut.dart';
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => EmailCubit()),
         BlocProvider(create: (context) => LocationCubit()),
         BlocProvider(create:(context) => ProductCubit()),
-        BlocProvider(create:(context) => OrderCubit()),
+      //  BlocProvider(create:(context) => OrderCubit()),
       ],
       child: Sizer(
          builder: (context, orientation, deviceType){ 
