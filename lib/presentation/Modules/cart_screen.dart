@@ -1,4 +1,5 @@
 import 'package:app02/constants/const.dart';
+import 'package:app02/domin/order_cubit/order_Cubit.dart';
 import 'package:app02/presentation/widget/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -89,6 +90,7 @@ class CartScreen extends StatelessWidget {
           ),
           SizedBox(height: 5.h),
           InkWell(onTap:(){
+            OrderCubit().add(list_cart);
           },child: buttonO(text:'order',))
         ],
       )

@@ -4,9 +4,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class OrderApi{
  
  addOrder(L){
-Order ?order;
-order!.convrt(L);
-  // FirebaseFirestore.instance.collection('collectionPath').add(list); 
+   Order order=new Order();
+   FirebaseFirestore.instance.collection('Orders').add(order.convrt(L)); 
  }
   
 
