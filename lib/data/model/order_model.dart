@@ -1,22 +1,22 @@
+import 'dart:convert';
+
+import 'package:app02/data/model/product_Model.dart';
+
 class Order{
-  String? Name;
-  String? Price;
-  String? id;
 
-  Order({this.Name,this.Price,});
+  Map <String,dynamic>?maptOfNames;
+  //List ? listOfName; 
 
-  toJson(){
-    return{
-      'Name':Name,
-      'Price':Price,
-
-
-    };
+convrt(List<Product> list){
+  for(int i=0;i<=list.length;i++){
+    maptOfNames!['Name $i']=list[i].Name;
   }
+  return jsonEncode(maptOfNames);
+}
 
-  Order.fromJson(Map<String,dynamic>json){
-    id=json['id'];
-    Name=json['Name'];
-    Price=json['Price'];
-  }
+tojson(){
+  return jsonEncode(maptOfNames);
+}
+
+
 }
