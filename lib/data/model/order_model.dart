@@ -4,19 +4,22 @@ import 'package:app02/data/model/product_Model.dart';
 
 class Order{
 
-  Map <String,dynamic>maptOfNames=new Map();
+  Map <String,String>maptOfNames=new Map();
   //List ? listOfName; 
 
 convrt(List<Product> list){
-  for(int i=1;i<=list.length;i++){
-    maptOfNames['Name $i']=list[i].Name;
+  int i=1;
+  for(Product e in list){
+    maptOfNames['Name $i'.toString()]=e.Name.toString();
+    i=i+1;
+    //print(maptOfNames);
   }
-  return jsonEncode(maptOfNames);
+  return maptOfNames;
 }
 
-tojson(){
+/*tojson(){
   return jsonEncode(maptOfNames);
-}
+}*/
 
 
 }
